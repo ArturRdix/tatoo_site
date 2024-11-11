@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  & a:not(&__logo) {
+    padding-block: 5px;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 100%;
+      background-color: #f2f1ef;
+      transition: 0.3s;
+    }
+    &:hover {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 40px;
+    .tel{
+      display: none;
+    }
+  }
+}
